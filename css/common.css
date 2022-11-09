@@ -22,3 +22,18 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+/* task 3 */
+li {
+list-style: none;
+}
+
+.gallery{
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-task-t{
+  width: 400px;
+  height: 100%;
+}
+

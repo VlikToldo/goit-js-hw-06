@@ -3,7 +3,7 @@ const inputEl = document.getElementById("validation-input");
 inputEl.addEventListener('blur', correctLength);
 
 function correctLength (e) {
-    if ( e.currentTarget.value.length = e.currentTarget.dataset.length) {
+    if ( e.currentTarget.value.length < e.currentTarget.dataset.length) {
 
         e.currentTarget.classList.remove('valid')
         e.currentTarget.classList.add('invalid')
@@ -13,4 +13,4 @@ function correctLength (e) {
         e.currentTarget.classList.add('valid')
     }
    
-};
+}

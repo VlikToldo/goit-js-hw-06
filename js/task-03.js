@@ -17,24 +17,11 @@ const images = [
 
 const listEl = document.querySelector('.gallery');
 
-
-const imgGalleryLiElement = attributes => {
- return  attributes.map(attribute =>{
-  listEl.insertAdjacentHTML("beforeend", `<li><img class="img-task-t" src='${attribute.url}' alt='${attribute.alt}'/></li>`)
-   return listEl;
- })
-}
-
-console.log(imgGalleryLiElement(images));
-
-
-// const imgGalleryLiElement = attributes => {
-//   return  attributes.map(attribute =>{
-//    const itemEl = document.createElement('li');
-//    listEl.append(itemEl);
-//    itemEl.insertAdjacentHTML("beforeend", `<img src=${attribute.url} alt=${attribute.alt}/>`)
-//     return itemEl;
-//   })
-//  }
+const imgEl = images
+  .map((attribute) => 
+   `<li><img class="img-task-t" src='${attribute.url}' alt='${attribute.alt}'/></li>`)
+  .join("");
  
-//  console.log(imgGalleryLiElement(images));
+
+  listEl.insertAdjacentHTML("beforeend", imgEl);
+

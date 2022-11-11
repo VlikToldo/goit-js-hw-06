@@ -10,9 +10,10 @@ const refs = {
 
 refs.btnChangeColor.addEventListener('click', changeColor)
 
-function changeColor () {
-  refs.colorTextEl.textContent = getRandomHexColor();
-  refs.bodyEl.style.backgroundColor = getRandomHexColor();
+function changeColor (e) {
+  const color = getRandomHexColor();
+  refs.colorTextEl.textContent = color;
+  refs.bodyEl.style.backgroundColor = color;
 }
 
 
